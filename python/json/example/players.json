@@ -1,0 +1,12 @@
+{
+  "players": [
+    {
+      "nickname": "Neo",
+      "points": [120, 150, 130]
+    },
+    {
+      "nickname": "Lara",
+      "points": [200, 180, 220]
+    }
+  ]
+}
