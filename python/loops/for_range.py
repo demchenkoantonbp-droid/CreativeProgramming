@@ -1,12 +1,9 @@
-# Запитуємо у користувача число
-num = int(input("Введіть число: "))
-
-# Перевіряємо, чи число більше нуля
-if num > 0:
-    for i in range(1, num + 1):
-        if i % 2 == 0:
-            print(f"{i} - парне число")
-        else:
-            print(f"{i} - непарне число")
-else:
-    print("Будь ласка, введіть позитивне число.")
+for i in range(1, 21):
+    if i % 3 == 0 and i % 5 == 0:
+        print("FizzBuzz")
+    elif i % 3 == 0:
+        print("Fizz")
+    elif i % 5 == 0:
+        print("Buzz")
+    else:
+        print(i)
