@@ -1,0 +1,44 @@
+import tkinter as tk
+
+# Створення головного вікна
+root = tk.Tk()
+root.title("tk")
+root.geometry("600" + "x" + "450")  # Розмір вікна
+root.resizable(False, False)
+
+# Створення полотна (Canvas) для малювання
+canvas = tk.Canvas(root, width=600, height=450, bg="white")
+canvas.pack(fill="both", expand=True)
+
+# 1. Фон: Небо (синій прямокутник)
+canvas.create_rectangle(0, 0, 600, 250, fill="blue", outline="blue")
+
+# 2. Фон: Трава (зелений прямокутник)
+canvas.create_rectangle(0, 250, 600, 450, fill="#38b000", outline="#38b000")
+
+# 3. Стіни будинку (світло-жовтий / бежевий прямокутник)
+canvas.create_rectangle(100, 280, 360, 450, fill="#ffebad", outline="#800000", width=2)
+
+# 4. Фундамент будинку (темно-бордовий прямокутник)
+canvas.create_rectangle(100, 435, 360, 450, fill="#800000", outline="#800000")
+
+# 5. Дах будинку (коричневий/бордовий багатокутник)
+canvas.create_polygon(130, 210, 330, 210, 360, 280, 100, 280, fill="#a02828", outline="#500000", width=2)
+
+# 6. Двері (коричневий прямокутник)
+canvas.create_rectangle(118, 385, 165, 450, fill="#a02828", outline="#500000", width=2)
+
+# 7. Ліве вікно (блакитний прямокутник)
+canvas.create_rectangle(188, 375, 246, 415, fill="#00ffff", outline="#00a8a8", width=2)
+
+# 8. Праве вікно (блакитний прямокутник)
+canvas.create_rectangle(268, 375, 326, 415, fill="#00ffff", outline="#00a8a8", width=2)
+
+# 9. Стовбур дерева (коричневий прямокутник)
+canvas.create_rectangle(415, 460, 438, 490, fill="#a02828", outline="#500000", width=2)
+
+# 10. Крона дерева (зелений еліпс)
+canvas.create_oval(385, 255, 468, 468, fill="green", outline="#004d00", width=2)
+
+# Запуск головного циклу програми
+root.mainloop()
